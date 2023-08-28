@@ -11,14 +11,18 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    private BottomNavigationView bottom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar=findViewById(R.id.tb01);
         setSupportActionBar(toolbar);
+
     }
 
     @Override
@@ -38,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId()==R.id.settings)
         {
             Toast.makeText(this,"Settings",Toast.LENGTH_SHORT).show();
-            Intent intent=new Intent(MainActivity.this,DrawerActivity.class);
+            Intent intent=new Intent(MainActivity.this,SettingsActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
