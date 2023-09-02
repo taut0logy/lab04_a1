@@ -3,6 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/m01"
+        android:title="@string/home"
+        android:icon="@drawable/baseline_home_24"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/m02"
+        android:title="@string/settings"
+        android:icon="@drawable/baseline_settings_24"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/m03"
+        android:title="@string/exit"
+        android:icon="@drawable/baseline_exit_to_app_24"
+        app:showAsAction="ifRoom"/>
+
 
 
 </menu>
