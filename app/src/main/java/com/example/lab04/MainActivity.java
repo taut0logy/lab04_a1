@@ -1,6 +1,7 @@
 package com.example.lab04;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -22,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar=findViewById(R.id.tb01);
         setSupportActionBar(toolbar);
-
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null) {
+            actionBar.setTitle("Home");
+            actionBar.setSubtitle("My App");
+        }
     }
 
     @Override
@@ -42,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId()==R.id.settings)
         {
             Toast.makeText(this,"Settings",Toast.LENGTH_SHORT).show();
-            Intent intent=new Intent(MainActivity.this,SettingsActivity.class);
+            Intent intent=new Intent(MainActivity.this,BottomActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

@@ -14,8 +14,11 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         toolbar=findViewById(R.id.tb01);
         setSupportActionBar(toolbar);
-
         ActionBar actionbar=getSupportActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
+        if(actionbar!=null) {
+            actionbar.setDisplayHomeAsUpEnabled(true);
+            actionbar.setTitle("Settings");
+            actionbar.setSubtitle("User");
+        }
     }
 }
