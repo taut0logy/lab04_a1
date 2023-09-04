@@ -29,7 +29,7 @@ public class BottomActivity extends AppCompatActivity {
                     } else {
                         load(new SettingsFragment(),false);
                     }
-                return false;
+                return true;
             }
         });
         bot.setSelectedItemId(R.id.home);
