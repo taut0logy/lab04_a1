@@ -56,7 +56,7 @@ public class DrawerActivity extends AppCompatActivity {
 
     public void load(Fragment fragment){
         FragmentTransaction fg=getSupportFragmentManager().beginTransaction();
-        fg.add(R.id.drawerFrame,fragment);
+        fg.add(R.id.frame,fragment);
         fg.commit();
     }
 }
